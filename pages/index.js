@@ -21,10 +21,7 @@ export default function Home({ allPostsData }) {
 				<title>{siteTitle}</title>
 			</Head>
 			<section className={utilStyles.headingMd}>
-				<p>
-					I'm DTrombett, the best. I really like coding and I'm literally fantastic. You want to be
-					like me? You can't.
-				</p>
+				<p>I'm DTrombett, a really nice guy who likes to code.</p>
 				<p>
 					(This is a sample website - you’ll be building a site like this on{" "}
 					<a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
