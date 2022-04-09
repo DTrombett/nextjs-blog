@@ -1,8 +1,9 @@
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import DateComponent from "../components/date";
-import Layout, { siteTitle } from "../components/layout";
+import DateComponent from "../components/DateComponent";
+import Layout, { siteTitle } from "../components/Layout";
+import LinkButton from "../components/LinkButton";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
 
@@ -19,12 +20,14 @@ const Home = ({
 		<Head>
 			<title>{siteTitle}</title>
 		</Head>
-		<section className={utilStyles.headingMd}>
-			<p>I&apos;m DTrombett, a really nice guy who likes to code.</p>
-			<p>
-				(This is a sample website - you’ll be building a site like this in{" "}
-				<a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-			</p>
+		<section className={`${utilStyles.headingMd} ${utilStyles.description}`}>
+			<p>I&apos;m D Trombett, a really nice guy who likes to code.</p>
+		</section>
+		<section className={utilStyles.buttonsDiv}>
+			<LinkButton
+				href="https://discord.gg/uuHajVFAh5"
+				text="Join Discord Server"
+			/>
 		</section>
 		<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 			<h2 className={utilStyles.headingLg}>Blog</h2>
@@ -42,6 +45,12 @@ const Home = ({
 				))}
 			</ul>
 		</section>
+		<footer className="footer">
+			<i>
+				This is a sample website - you’ll be building a site like this in{" "}
+				<a href="https://nextjs.org/learn">our Next.js tutorial</a>
+			</i>
+		</footer>
 	</Layout>
 );
 

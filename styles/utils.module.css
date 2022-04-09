@@ -50,3 +50,14 @@
 .lightText {
 	color: #666;
 }
+
+.buttonsDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.description {
+	text-align: center;
+}
