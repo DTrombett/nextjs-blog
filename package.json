@@ -2,7 +2,7 @@
   "private": true,
   "author": "DTrombett",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.x.x"
   },
   "homepage": "https://github.com/DTrombett/nextjs-blog#readme",
   "repository": {
