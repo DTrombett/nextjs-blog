@@ -7,6 +7,9 @@ import styles from "./layout.module.css";
 const name = "D Trombett";
 export const siteTitle = "Next.js Sample Website";
 
+/**
+ * The base layout.
+ */
 const Layout = ({
 	children,
 	home = false,
@@ -35,7 +38,7 @@ const Layout = ({
 				<>
 					<Image
 						priority
-						src="/images/profile.jpg"
+						src="/images/profile.png"
 						className={utilStyles.borderCircle}
 						height={144}
 						width={144}
@@ -49,7 +52,7 @@ const Layout = ({
 						<a>
 							<Image
 								priority
-								src="/images/profile.jpg"
+								src="/images/profile.png"
 								className={utilStyles.borderCircle}
 								height={108}
 								width={108}

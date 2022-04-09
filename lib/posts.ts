@@ -7,6 +7,10 @@ import html from "remark-html";
 
 const postsDirectory = join(cwd(), "posts");
 
+/**
+ * Get the data of all the posts.
+ * @returns An array of posts
+ */
 export const getSortedPostsData = async () =>
 	Promise.all(
 		(await readdir(postsDirectory)).map((fileName) =>
@@ -21,6 +25,10 @@ export const getSortedPostsData = async () =>
 		)
 	);
 
+/**
+ * Get the id of all the posts.
+ * @returns An array of post ids
+ */
 export const getAllPostIds = () =>
 	readdir(postsDirectory).then((postIds) =>
 		postIds.map((fileName) => ({
@@ -30,6 +38,11 @@ export const getAllPostIds = () =>
 		}))
 	);
 
+/**
+ * Get the data of a single post.
+ * @param id - The id of the post
+ * @returns The data of the post
+ */
 export const getPostData = async (id: string) => {
 	const matterResult = matter(
 		await readFile(join(postsDirectory, `${id}.md`), "utf8")
