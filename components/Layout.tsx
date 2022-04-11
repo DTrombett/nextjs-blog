@@ -30,7 +30,7 @@ const Layout = ({
 	<div className={styles.container}>
 		<Head>
 			<meta name="description" content={description} />
-			<meta property="og:image" content={image} />
+			<meta name="og:image" content={image} />
 			<meta name="og:title" content={title} />
 			<meta name="og:description" content={description} />
 			<meta name="twitter:card" content="summary" />
