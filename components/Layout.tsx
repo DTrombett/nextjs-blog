@@ -17,7 +17,7 @@ const Layout = ({
 	description = `DTrombett's personal blog, ${personalDescription}.`,
 	home = false,
 	imageSquare = "/images/profile.png",
-	image = "/images/banner.jpg",
+	image = "/images/banner.png",
 	title = siteTitle,
 }: {
 	children: React.ReactNode;
