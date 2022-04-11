@@ -1,29 +1,26 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
-import Head from "next/head";
 import DateComponent from "../../components/DateComponent";
 import Layout from "../../components/Layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";
 
 const Post = ({
-	postData,
+	postData: { contentHtml, contentMarkdown, date, title },
 }: {
 	postData: {
 		title: string;
 		date: string;
 		contentHtml: string;
+		contentMarkdown: string;
 	};
 }) => (
-	<Layout>
-		<Head>
-			<title>{postData.title}</title>
-		</Head>
+	<Layout description={contentMarkdown} title={title}>
 		<article>
-			<h1 className={utilStyles.headingXl}>{postData.title}</h1>
+			<h1 className={utilStyles.headingXl}>{title}</h1>
 			<div className={utilStyles.lightText}>
-				<DateComponent dateString={postData.date} />
+				<DateComponent dateString={date} />
 			</div>
-			<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+			<div dangerouslySetInnerHTML={{ __html: contentHtml }} />
 		</article>
 	</Layout>
 );

@@ -1,44 +1,50 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import profilePic from "../public/images/profile.png";
 import utilStyles from "../styles/utils.module.css";
 import styles from "./layout.module.css";
 
 const name = "D Trombett";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "DTrombett Blog";
+export const personalDescription = "a really nice guy who likes to code";
 
 /**
  * The base layout.
  */
 const Layout = ({
 	children,
+	description = `DTrombett's personal blog, ${personalDescription}.`,
 	home = false,
+	imageSquare = "/images/profile.png",
+	image = "/images/banner.jpg",
+	title = siteTitle,
 }: {
 	children: React.ReactNode;
+	description?: string;
 	home?: boolean;
+	imageSquare?: string;
+	image?: string;
+	title?: string;
 }) => (
 	<div className={styles.container}>
 		<Head>
-			<link rel="icon" href="/favicon.ico" />
-			<meta
-				name="description"
-				content="Learn how to build a personal website using Next.js"
-			/>
-			<meta
-				property="og:image"
-				content={`https://og-image.vercel.app/${encodeURI(
-					siteTitle
-				)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-			/>
-			<meta name="og:title" content={siteTitle} />
-			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="description" content={description} />
+			<meta property="og:image" content={image} />
+			<meta name="og:title" content={title} />
+			<meta name="og:description" content={description} />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:description" content={description} />
+			<meta name="twitter:image" content={imageSquare} />
+			<meta name="twitter:title" content={title} />
+			<title>{title}</title>
 		</Head>
 		<header className={styles.header}>
 			{home ? (
 				<>
 					<Image
 						priority
-						src="/images/profile.png"
+						src={profilePic}
 						className={utilStyles.borderCircle}
 						height={144}
 						width={144}
