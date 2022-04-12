@@ -52,9 +52,6 @@
 }
 
 .buttonsDiv {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 	margin-top: 1rem;
 }
 
@@ -66,4 +63,25 @@
 	display: flex;
 	justify-content: center !important;
 	align-items: center;
+}
+
+.reddit {
+	background-color: #ff4500 !important;
+}
+.reddit:hover {
+	background-color: #f53b00 !important;
+}
+
+.github {
+	background-color: #363636 !important;
+}
+.github:hover {
+	background-color: #2a2a2a !important;
+}
+
+.youtube {
+	background-color: #ff0000 !important;
+}
+.youtube:hover {
+	background-color: #e60000 !important;
 }

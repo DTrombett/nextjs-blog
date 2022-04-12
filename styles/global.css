@@ -43,3 +43,7 @@ strong {
 	font-weight: bold;
 	color: var(--light-color);
 }
+
+button:not(:last-child) {
+	margin-right: 1rem;
+}

@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -24,12 +25,43 @@ const Home = ({
 			<section className={`${utilStyles.headingMd} ${utilStyles.description}`}>
 				<p>I&apos;m D Trombett, {personalDescription}.</p>
 			</section>
-			<section className={utilStyles.buttonsDiv}>
+			<div
+				className={`${utilStyles.buttonsDiv} ${utilStyles.centered} buttons`}
+			>
+				<LinkButton href="https://discord.gg/uuHajVFAh5" className="is-link">
+					<span className="icon">
+						<i className="fab fa-discord" />
+					</span>
+					<span>Discord</span>
+				</LinkButton>
 				<LinkButton
-					href="https://discord.gg/uuHajVFAh5"
-					text="Join Discord Server"
-				/>
-			</section>
+					href="https://github.com/dtrombett"
+					className={`${utilStyles.github} is-link`}
+				>
+					<span className="icon">
+						<i className="fab fa-github" />
+					</span>
+					<span>GitHub</span>
+				</LinkButton>
+				<LinkButton
+					href="https://reddit.com/u/dtrombett"
+					className={`${utilStyles.reddit} is-link`}
+				>
+					<span className="icon">
+						<i className="fab fa-reddit" />
+					</span>
+					<span>Reddit</span>
+				</LinkButton>
+				<LinkButton
+					href="https://youtube.com/channel/UCClAw4ngK_uwjqzxwcuj97Q"
+					className={`${utilStyles.youtube} is-link`}
+				>
+					<span className="icon">
+						<i className="fab fa-youtube" />
+					</span>
+					<span>YouTube</span>
+				</LinkButton>
+			</div>
 			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 				<h2 className={utilStyles.headingLg}>Blog</h2>
 				<ul className={utilStyles.list}>
