@@ -54,6 +54,7 @@ export const getPostData = async (id: string) => {
 			.use(html)
 			.process(matterResult.content)
 			.then((result) => result.toString()),
+		contentMarkdown: matterResult.content,
 		...(matterResult.data as { date: string; title: string }),
 	};
 };

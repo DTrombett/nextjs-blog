@@ -1,20 +1,25 @@
 import type { LinkProps } from "next/link";
 import Link from "next/link";
-import type { HTMLAttributes } from "react";
 
 /**
  * A link button.
  */
 const LinkButton = ({
 	text,
-	buttonProps,
-	...props
-}: LinkProps & {
-	text: string;
-	buttonProps?: HTMLAttributes<HTMLButtonElement>;
+	href,
+	children,
+	className = "",
+	linkProps,
+}: {
+	text?: string;
+	href: string;
+	className?: string;
+	linkProps?: LinkProps;
+	children?: React.ReactNode;
 }) => (
-	<Link {...props}>
-		<button className="button is-link" {...buttonProps}>
+	<Link passHref href={href} {...linkProps}>
+		<button className={`button ${className}`}>
+			{children}
 			{text}
 		</button>
 	</Link>

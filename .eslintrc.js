@@ -1,7 +1,7 @@
 const { builtinModules } = require("node:module");
 
 module.exports = {
-	ignorePatterns: [".next/", "node_modules/", ".eslintrc.js"],
+	ignorePatterns: [".next/", "node_modules/", "*.js"],
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
