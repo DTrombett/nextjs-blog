@@ -1,5 +1,5 @@
-import type { LinkProps } from "next/link";
 import Link from "next/link";
+import type { LinkButtonOptions } from "../types";
 
 /**
  * A link button.
@@ -10,13 +10,7 @@ const LinkButton = ({
 	children,
 	className = "",
 	linkProps,
-}: {
-	text?: string;
-	href: string;
-	className?: string;
-	linkProps?: LinkProps;
-	children?: React.ReactNode;
-}) => (
+}: LinkButtonOptions) => (
 	<Link passHref href={href} {...linkProps}>
 		<button className={`button ${className}`}>
 			{children}

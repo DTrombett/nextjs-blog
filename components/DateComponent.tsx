@@ -1,9 +1,10 @@
 import capitalize from "../lib/capitalize";
+import type { DateOptions } from "../types";
 
 /**
  * Format a date string to a human readable format.
  */
-const DateComponent = ({ dateString }: { dateString: string }) => {
+const DateComponent = ({ dateString }: DateOptions) => {
 	const date = new Date(dateString);
 
 	return (

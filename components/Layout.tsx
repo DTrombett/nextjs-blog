@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import profilePic from "../public/images/profile.png";
 import utilStyles from "../styles/utils.module.css";
+import type { LayoutOptions } from "../types";
 import styles from "./layout.module.css";
 
 const name = "D Trombett";
@@ -19,14 +20,7 @@ const Layout = ({
 	imageSquare = "/images/profile.png",
 	image = "/images/banner.png",
 	title = siteTitle,
-}: {
-	children: React.ReactNode;
-	description?: string;
-	home?: boolean;
-	imageSquare?: string;
-	image?: string;
-	title?: string;
-}) => (
+}: LayoutOptions) => (
 	<div className={styles.container}>
 		<Head>
 			<meta name="description" content={description} />

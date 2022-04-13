@@ -3,17 +3,11 @@ import DateComponent from "../../components/DateComponent";
 import Layout from "../../components/Layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";
+import type { Params, PostFileData, PostOptions, Props } from "../../types";
 
 const Post = ({
 	postData: { contentHtml, contentMarkdown, date, title },
-}: {
-	postData: {
-		title: string;
-		date: string;
-		contentHtml: string;
-		contentMarkdown: string;
-	};
-}) => (
+}: PostOptions) => (
 	<Layout description={contentMarkdown} title={title}>
 		<article>
 			<h1 className={utilStyles.headingXl}>{title}</h1>
@@ -30,9 +24,11 @@ export const getStaticPaths: GetStaticPaths = async () => ({
 	fallback: false,
 });
 
-export const getStaticProps: GetStaticProps = async ({ params }) => ({
+export const getStaticProps: GetStaticProps = async ({
+	params,
+}: Params<PostFileData>): Promise<Props<PostOptions>> => ({
 	props: {
-		postData: await getPostData(params!.id as string),
+		postData: await getPostData(params.id),
 	},
 });
 

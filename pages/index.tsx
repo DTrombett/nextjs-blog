@@ -7,16 +7,9 @@ import Layout, { personalDescription, siteTitle } from "../components/Layout";
 import LinkButton from "../components/LinkButton";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
+import type { HomeOptions, Props } from "../types";
 
-const Home = ({
-	allPostsData,
-}: {
-	allPostsData: {
-		date: string;
-		title: string;
-		id: string;
-	}[];
-}) => (
+const Home = ({ allPostsData }: HomeOptions) => (
 	<>
 		<Layout home>
 			<Head>
@@ -88,7 +81,9 @@ const Home = ({
 	</>
 );
 
-export const getStaticProps: GetStaticProps = async () => ({
+export const getStaticProps: GetStaticProps = async (): Promise<
+	Props<HomeOptions>
+> => ({
 	props: {
 		allPostsData: await getSortedPostsData(),
 	},
