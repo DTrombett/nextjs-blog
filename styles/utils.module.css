@@ -85,3 +85,7 @@
 .youtube:hover {
 	background-color: #e60000 !important;
 }
+
+.removeHoverUnderline:hover {
+	text-decoration: none;
+}
