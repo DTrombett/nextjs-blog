@@ -1,6 +1,9 @@
 import type { LinkProps } from "next/link";
 
 export type DateOptions = { dateString: string };
+export type HomeOptions = {
+	allPostsData: PostData[];
+};
 export type LayoutOptions = {
 	children: React.ReactNode;
 	description?: string;
@@ -15,23 +18,21 @@ export type LinkButtonOptions = {
 	className?: string;
 	linkProps?: LinkProps;
 	children?: React.ReactNode;
+	target?: string;
 };
-export type PostData = PostDetails & PostFileData;
 export type Params<T> = {
 	params: T;
 };
-export type Props<T> = {
-	props: T;
-};
-export type PostFileData = { id: string };
-export type PostDetails = { date: string; title: string };
 export type PostContent = PostData & {
 	contentHtml: string;
 	contentMarkdown: string;
 };
+export type PostData = PostDetails & PostFileData;
+export type PostDetails = { date: string; title: string };
+export type PostFileData = { id: string };
 export type PostOptions = {
 	postData: PostContent;
 };
-export type HomeOptions = {
-	allPostsData: PostData[];
+export type Props<T> = {
+	props: T;
 };
