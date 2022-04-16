@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import profilePic from "../public/images/profile.png";
 import utilStyles from "../styles/utils.module.css";
 import type { LayoutOptions } from "../types";
 import styles from "./layout.module.css";
@@ -38,7 +37,7 @@ const Layout = ({
 				<>
 					<Image
 						priority
-						src={profilePic}
+						src="/images/profile.png"
 						className={utilStyles.borderCircle}
 						height={144}
 						width={144}
