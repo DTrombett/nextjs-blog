@@ -42,6 +42,7 @@ const Layout = ({
 						height={144}
 						width={144}
 						alt={name}
+						resource="/images/profile.png"
 					/>
 					<h1 className={utilStyles.heading2Xl}>{name}</h1>
 				</>
@@ -56,6 +57,7 @@ const Layout = ({
 								height={108}
 								width={108}
 								alt={name}
+								resource="/images/profile.png"
 							/>
 						</a>
 					</Link>

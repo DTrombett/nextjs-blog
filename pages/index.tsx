@@ -15,9 +15,9 @@ const Home = ({ allPostsData }: HomeOptions) => (
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section className={`${utilStyles.headingMd} ${utilStyles.description}`}>
+			<div className={`${utilStyles.headingMd} ${utilStyles.description}`}>
 				<p>I&apos;m D Trombett, {personalDescription}.</p>
-			</section>
+			</div>
 			<div
 				className={`${utilStyles.buttonsDiv} ${utilStyles.centered} buttons`}
 			>
