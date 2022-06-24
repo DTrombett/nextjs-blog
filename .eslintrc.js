@@ -79,7 +79,6 @@ module.exports = {
 		"default-case": "warn",
 		"grouped-accessor-pairs": "warn",
 		"guard-for-in": "warn",
-		"no-alert": "warn",
 		"no-await-in-loop": "warn",
 		"no-caller": "warn",
 		"no-case-declarations": "off",

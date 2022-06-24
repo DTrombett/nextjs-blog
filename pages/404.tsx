@@ -1,10 +1,7 @@
-import Layout from "../components/Layout";
-import utilStyles from "../styles/utils.module.css";
+import styles from "../styles/utils.module.css";
 
 const NotFound = () => (
-	<Layout description="This page could not be found" title="404">
-		<div className={utilStyles.centered}>This page could not be found!</div>
-	</Layout>
+	<div className={styles.centered}>This page could not be found!</div>
 );
 
 export default NotFound;
