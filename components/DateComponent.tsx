@@ -4,11 +4,11 @@ import type { DateOptions } from "../types";
 /**
  * Format a date string to a human readable format.
  */
-const DateComponent = ({ timestamp }: DateOptions) => {
-	const date = new Date(timestamp);
+const DateComponent = ({ dateString }: DateOptions) => {
+	const date = new Date(dateString);
 
 	return (
-		<time dateTime={date.toISOString()}>
+		<time dateTime={dateString}>
 			{date.getDate()}{" "}
 			{capitalize(date.toLocaleString("default", { month: "long" }))}{" "}
 			{date.getFullYear()}

@@ -25,6 +25,10 @@
 	line-height: 1.5;
 }
 
+.borderCircle {
+	border-radius: 9999px;
+}
+
 .colorInherit {
 	color: inherit;
 }
@@ -47,13 +51,8 @@
 	color: #b0b0b0;
 }
 
-.optionsDiv {
+.buttonsDiv {
 	margin-top: 1rem;
-	border: 1px dashed var(--color);
-	border-radius: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
 }
 
 .description {
@@ -62,91 +61,31 @@
 
 .centered {
 	display: flex;
+	justify-content: center !important;
+	align-items: center;
 }
 
-.optionElement {
-	margin-top: 1rem;
-	margin-left: 2rem;
+.reddit {
+	background-color: #ff4500 !important;
 }
-.optionElement:first-child {
-	margin-top: 2rem !important;
-}
-.optionElement:last-child {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+.reddit:hover {
+	background-color: #f53b00 !important;
 }
 
-.ipsDiv {
-	height: 1rem;
-	margin-right: 1rem;
-	margin-bottom: 1rem;
-}
-
-.ips {
-	vertical-align: middle;
-	margin-left: 0.5rem;
-	background-color: #2a2a2a;
-	color: inherit;
-	font-size: medium;
-	border-radius: 5px;
-}
-
-.ipsText {
-	vertical-align: middle;
-}
-
-.wrongIps {
-	border-color: #ff0000 !important;
-}
-
-.fileInput {
+.github {
 	background-color: #363636 !important;
-	color: inherit !important;
-	border: none;
 }
-.fileInput:hover {
+.github:hover {
 	background-color: #2a2a2a !important;
 }
 
-.fileName {
-	margin-left: 1rem;
-	margin-right: 2rem;
-	margin-bottom: 1rem;
-	height: inherit;
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-	top: 0.5rem;
-	word-break: break-all;
+.youtube {
+	background-color: #ff0000 !important;
 }
-
-.upload {
-	background-color: #363636 !important;
-	color: inherit !important;
-	border: none;
-	margin-left: auto;
-	margin-right: auto;
-}
-.upload:hover {
-	background-color: #2a2a2a !important;
-}
-
-.input {
-	display: none;
+.youtube:hover {
+	background-color: #e60000 !important;
 }
 
 .removeHoverUnderline:hover {
 	text-decoration: none;
-}
-
-.container {
-	max-width: 36rem;
-	padding: 0 1rem;
-	margin: 3rem auto;
-}
-
-.header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }

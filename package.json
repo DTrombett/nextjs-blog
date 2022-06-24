@@ -1,16 +1,16 @@
 {
-	"name": "local-file-share",
+	"name": "nextjs-blog",
 	"author": "DTrombett",
 	"engines": {
 		"node": ">=14.x.x"
 	},
-	"homepage": "https://github.com/DTrombett/local-file-share#readme",
+	"homepage": "https://github.com/DTrombett/nextjs-blog#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/DTrombett/local-file-share.git"
+		"url": "git+https://github.com/DTrombett/nextjs-blog.git"
 	},
 	"bugs": {
-		"url": "https://github.com/DTrombett/local-file-share/issues"
+		"url": "https://github.com/DTrombett/nextjs-blog/issues"
 	},
 	"scripts": {
 		"dev": "next dev",
@@ -24,11 +24,15 @@
 		"@fullhuman/postcss-purgecss": "^4.1.3",
 		"autoprefixer": "^10.4.7",
 		"bulma": "^0.9.3",
+		"gray-matter": "^4.0.3",
 		"next": "latest",
 		"postcss-flexbugs-fixes": "^5.0.2",
 		"postcss-preset-env": "^7.4.4",
 		"react": "18.1.0",
-		"react-dom": "18.1.0"
+		"react-dom": "18.1.0",
+		"remark": "^14.0.2",
+		"remark-html": "^15.0.1",
+		"sharp": "^0.30.4"
 	},
 	"devDependencies": {
 		"@next/eslint-plugin-next": "^12.1.5",
